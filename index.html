@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Skip Count Assessment Recorder&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #1a1a1a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f5f5f5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container { max-width: 700px; margin: 0 auto; background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input, select, textarea { font-family: inherit; font-size: 16px; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; width: 100%; background: white; color: #1a1a1a; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input:focus, select:focus, textarea:focus { outline: 2px solid #0066cc; outline-offset: 2px; border-color: #0066cc; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button { padding: 10px 16px; border: 1px solid #ddd; background: white; color: #1a1a1a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:hover { background: #f0f0f0; border-color: #999; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.primary { background: #0066cc; color: white; border-color: #0066cc; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.primary:hover { background: #0052a3; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.danger { background: #dc3545; color: white; border-color: #dc3545; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h2 { font-size: 20px; margin: 0 0 1.5rem 0; font-weight: 600; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h3 { font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin: 1.5rem 0 0.75rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-group label { font-size: 14px; font-weight: 500; color: #1a1a1a; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.assessment-area { background: #f9f9f9; border-radius: 12px; padding: 1.25rem; border: 1px solid #e0e0e0; margin: 1.5rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.button-group { display: flex; gap: 8px; flex-wrap: wrap; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.button-group button { flex: 1; min-width: 80px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.checkbox-group { display: flex; align-items: center; gap: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.checkbox-group input[type="checkbox"] { width: auto; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.status-display { font-size: 13px; color: #666; margin-top: 0.5rem; font-style: italic; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.divider { border-top: 1px solid #e0e0e0; margin: 2rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.attempt-card { background: white; border: 1px solid #e0e0e0; border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.attempt-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.attempt-name { font-size: 16px; font-weight: 600; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.attempt-timestamp { font-size: 12px; color: #999; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.attempt-meta { font-size: 13px; color: #666; margin: 0.5rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badge { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 500; margin-right: 0.5rem; margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badge.success { background: #d4edda; color: #155724; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badge.warning { background: #fff3cd; color: #856404; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badge.danger { background: #f8d7da; color: #721c24; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badge.neutral { background: #e2e3e5; color: #383d41; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.attempt-notes { font-size: 13px; color: #666; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #f0f0f0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.empty-state { color: #999; font-size: 14px; padding: 1rem; text-align: center; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.small-input { width: 80px !important; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Skip count assessment&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;Student name&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="studentName" placeholder="e.g., Maya, Alex" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="grid-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;Skip count interval&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;select id="interval"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="2"&gt;By 2s&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="5"&gt;By 5s&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="10"&gt;By 10s&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="3"&gt;By 3s&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="4"&gt;By 4s&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="25"&gt;By 25s&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;Starting point&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="number" id="startPoint" value="0" step="1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label&gt;Total objects being counted&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="number" id="totalObjects" placeholder="e.g., 47" min="1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3&gt;Record assessment&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="assessment-area"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label style="margin-bottom: 0.25rem;"&gt;Accuracy&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="button-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="setAccuracy('correct')"&gt;✓ Accurate&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="setAccuracy('selfcorrected')"&gt;↻ Self-corrected&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="setAccuracy('error')"&gt;✗ Errors&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="status-display" id="accuracyDisplay"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-group" style="margin-top: 1.25rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label style="margin-bottom: 0.25rem;"&gt;Fluency / Endurance&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="button-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="setFluency('fluent')"&gt;⚡ Fluent throughout&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="setFluency('moderate')"&gt;→ Steady&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="setFluency('hesitant')"&gt;‖ Hesitant / slow&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="status-display" id="fluencyDisplay"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-group" id="countCompletedGroup" style="margin-top: 1.25rem; display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label style="margin-bottom: 0.5rem;"&gt;How many counts did they complete before the error/hesitation?&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="number" id="countCompleted" class="small-input" placeholder="e.g., 15" min="1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="font-size: 12px; color: #999; margin-top: 0.5rem;"&gt;(marks where accuracy or fluency broke down)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-group" style="margin-top: 1.25rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="checkbox-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="checkbox" id="objectsCorrespondence" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="objectsCorrespondence" style="margin: 0;"&gt;Objects correspondence (grouped/pointed to items as they counted)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="font-size: 12px; color: #999; margin-top: 0.5rem;"&gt;One-to-one matching between count and physical groups&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-group" style="margin-top: 1.25rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="checkbox-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="checkbox" id="remainderStruggle" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="remainderStruggle" style="margin: 0;"&gt;Struggled with remainder&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="font-size: 12px; color: #999; margin-top: 0.5rem;"&gt;Did not know what to do with leftover items that don't form a complete skip-count group&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-group" style="margin-top: 1.25rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label style="margin-bottom: 0.5rem;"&gt;Organizational strategies observed&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display: flex; flex-direction: column; gap: 8px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="checkbox-group"&gt;&lt;input type="checkbox" id="stratMovedGroups" /&gt;&lt;label for="stratMovedGroups" style="margin: 0;"&gt;Moved/organized objects into groups on table&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="checkbox-group"&gt;&lt;input type="checkbox" id="stratLinedUp" /&gt;&lt;label for="stratLinedUp" style="margin: 0;"&gt;Lined up or arranged for easy restart&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="checkbox-group"&gt;&lt;input type="checkbox" id="stratSeparated" /&gt;&lt;label for="stratSeparated" style="margin: 0;"&gt;Separated completed groups from uncounted items&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="checkbox-group"&gt;&lt;input type="checkbox" id="stratContainers" /&gt;&lt;label for="stratContainers" style="margin: 0;"&gt;Used containers/cups to hold groups&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="checkbox-group"&gt;&lt;input type="checkbox" id="stratRows" /&gt;&lt;label for="stratRows" style="margin: 0;"&gt;Arranged in rows or clear visual pattern&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="checkbox-group"&gt;&lt;input type="checkbox" id="stratNone" /&gt;&lt;label for="stratNone" style="margin: 0;"&gt;No visible organizational strategy&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-group" style="margin-top: 1.25rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label&gt;Additional notes&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;textarea id="notes" placeholder="e.g., explained their thinking, asked questions, tried alternative approach..." style="height: 70px; resize: vertical;"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="primary" onclick="saveAttempt()" style="width: 100%; margin-top: 1.25rem; padding: 12px; font-size: 16px;"&gt;Record attempt&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3&gt;Assessment history&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div style="display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="downloadCSV()" style="flex: 1; min-width: 150px;"&gt;📥 Download as CSV&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="copyToClipboard()" style="flex: 1; min-width: 150px;"&gt;📋 Copy to clipboard&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="attemptsList"&gt;&lt;div class="empty-state"&gt;No attempts recorded yet&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">let currentAccuracy = null;</p>
+<p class="p1">let currentFluency = null;</p>
+<p class="p1">let attempts = JSON.parse(localStorage.getItem('skipCountAttempts')) || [];</p>
+<p class="p2"><br></p>
+<p class="p1">function setAccuracy(value) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>currentAccuracy = value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const labels = { correct: 'Accurate', selfcorrected: 'Self-corrected', error: 'Errors' };</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('accuracyDisplay').textContent = '→ ' + labels[value];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>updateCountCompletedVisibility();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function setFluency(value) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>currentFluency = value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const labels = { fluent: 'Fluent throughout', moderate: 'Steady', hesitant: 'Hesitant/slow' };</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('fluencyDisplay').textContent = '→ ' + labels[value];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>updateCountCompletedVisibility();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function updateCountCompletedVisibility() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const countGroup = document.getElementById('countCompletedGroup');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const countInput = document.getElementById('countCompleted');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if ((currentAccuracy === 'error') || (currentFluency === 'hesitant')) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>countGroup.style.display = 'flex';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>countInput.required = true;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>countGroup.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>countInput.required = false;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>countInput.value = '';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function saveAttempt() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const name = document.getElementById('studentName').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const interval = document.getElementById('interval').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const start = document.getElementById('startPoint').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const totalObjects = document.getElementById('totalObjects').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const countCompleted = document.getElementById('countCompleted').value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const correspondence = document.getElementById('objectsCorrespondence').checked;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const remainderStruggle = document.getElementById('remainderStruggle').checked;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const notes = document.getElementById('notes').value.trim();</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (!name) { alert('Please enter student name'); return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (!currentAccuracy || !currentFluency) { alert('Please select accuracy and fluency'); return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if ((currentAccuracy === 'error' || currentFluency === 'hesitant') &amp;&amp; !countCompleted) { alert('Please record how many counts were completed before the breakdown'); return; }</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const strategies = {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>movedGroups: document.getElementById('stratMovedGroups').checked,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>linedUp: document.getElementById('stratLinedUp').checked,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>separated: document.getElementById('stratSeparated').checked,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>containers: document.getElementById('stratContainers').checked,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>rows: document.getElementById('stratRows').checked,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>none: document.getElementById('stratNone').checked</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const attempt = {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>id: Date.now(),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>timestamp: new Date().toLocaleString(),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>student: name,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>interval: interval,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>start: start,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>totalObjects: totalObjects || '—',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>countCompleted: countCompleted || '—',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>accuracy: currentAccuracy,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fluency: currentFluency,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>correspondence: correspondence,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>remainderStruggle: remainderStruggle,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>strategies: strategies,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>notes: notes</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>attempts.unshift(attempt);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>localStorage.setItem('skipCountAttempts', JSON.stringify(attempts));</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('countCompleted').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('notes').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('objectsCorrespondence').checked = false;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('remainderStruggle').checked = false;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('stratMovedGroups').checked = false;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('stratLinedUp').checked = false;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('stratSeparated').checked = false;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('stratContainers').checked = false;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('stratRows').checked = false;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('stratNone').checked = false;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>currentAccuracy = null;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>currentFluency = null;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('accuracyDisplay').textContent = '';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('fluencyDisplay').textContent = '';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>updateCountCompletedVisibility();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>renderAttempts();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function renderAttempts() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const list = document.getElementById('attemptsList');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (attempts.length === 0) { list.innerHTML = '&lt;div class="empty-state"&gt;No attempts recorded yet&lt;/div&gt;'; return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>list.innerHTML = attempts.map(att =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const accuracyLabel = { correct: 'Accurate', selfcorrected: 'Self-corrected', error: 'Errors' }[att.accuracy];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const accuracyClass = att.accuracy === 'correct' ? 'success' : att.accuracy === 'selfcorrected' ? 'warning' : 'danger';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const fluencyLabel = { fluent: 'Fluent', moderate: 'Steady', hesitant: 'Hesitant' }[att.fluency];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const strategiesList = [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (att.strategies.movedGroups) strategiesList.push('grouped objects');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (att.strategies.linedUp) strategiesList.push('lined up');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (att.strategies.separated) strategiesList.push('separated groups');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (att.strategies.containers) strategiesList.push('used containers');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (att.strategies.rows) strategiesList.push('visual pattern');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (att.strategies.none) strategiesList.push('no strategy');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return `&lt;div class="attempt-card"&gt;&lt;div class="attempt-header"&gt;&lt;div&gt;&lt;div class="attempt-name"&gt;${att.student}&lt;/div&gt;&lt;div class="attempt-timestamp"&gt;${att.timestamp}&lt;/div&gt;&lt;/div&gt;&lt;button class="danger" onclick="deleteAttempt(${att.id})" style="padding: 6px 12px; font-size: 13px;"&gt;Delete&lt;/button&gt;&lt;/div&gt;&lt;div class="attempt-meta"&gt;Skip by &lt;strong&gt;${att.interval}s&lt;/strong&gt;, starting at &lt;strong&gt;${att.start}&lt;/strong&gt;${att.totalObjects !== '—' ? ` • &lt;strong&gt;${att.totalObjects}&lt;/strong&gt; objects` : ''}&lt;/div&gt;&lt;div&gt;&lt;span class="badge ${accuracyClass}"&gt;${accuracyLabel}&lt;/span&gt;&lt;span class="badge neutral"&gt;${fluencyLabel}&lt;/span&gt;${att.countCompleted !== '—' ? `&lt;span class="badge neutral"&gt;${att.countCompleted} counts&lt;/span&gt;` : ''}${att.correspondence ? '&lt;span class="badge success"&gt;✓ Correspondence&lt;/span&gt;' : ''}${att.remainderStruggle ? '&lt;span class="badge warning"&gt;⚠ Remainder&lt;/span&gt;' : ''}&lt;/div&gt;${strategiesList.length &gt; 0 ? `&lt;div class="attempt-notes"&gt;&lt;strong&gt;Strategies:&lt;/strong&gt; ${strategiesList.join(', ')}&lt;/div&gt;` : ''}${att.notes ? `&lt;div class="attempt-notes"&gt;&lt;strong&gt;Notes:&lt;/strong&gt; "${att.notes}"&lt;/div&gt;` : ''}&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).join('');</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">renderAttempts();</p>
+<p class="p2"><br></p>
+<p class="p1">function buildSpreadsheetData() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const headers = ['Student Name', 'Assessment Date', 'Skip Interval', 'Starting Point', 'Total Objects', 'Counts Completed', 'Accuracy', 'Fluency', 'Objects Correspondence', 'Struggled with Remainder', 'Strategy: Moved Groups', 'Strategy: Lined Up', 'Strategy: Separated Groups', 'Strategy: Containers', 'Strategy: Rows/Pattern', 'Strategy: No Strategy', 'Notes'];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rows = attempts.map(att =&gt; [att.student, att.timestamp, 'By ' + att.interval + 's', att.start, att.totalObjects, att.countCompleted, att.accuracy === 'correct' ? 'Accurate' : att.accuracy === 'selfcorrected' ? 'Self-corrected' : 'Errors', att.fluency === 'fluent' ? 'Fluent' : att.fluency === 'moderate' ? 'Steady' : 'Hesitant', att.correspondence ? 'Yes' : 'No', att.remainderStruggle ? 'Yes' : 'No', att.strategies.movedGroups ? 'Yes' : 'No', att.strategies.linedUp ? 'Yes' : 'No', att.strategies.separated ? 'Yes' : 'No', att.strategies.containers ? 'Yes' : 'No', att.strategies.rows ? 'Yes' : 'No', att.strategies.none ? 'Yes' : 'No', att.notes]);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return { headers, rows };</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function downloadCSV() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (attempts.length === 0) { alert('No attempts to export yet'); return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const { headers, rows } = buildSpreadsheetData();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let csv = headers.map(h =&gt; '"' + h.replace(/"/g, '""') + '"').join(',') + '\n';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>rows.forEach(row =&gt; { csv += row.map(cell =&gt; { const value = String(cell); return '"' + value.replace(/"/g, '""') + '"'; }).join(',') + '\n'; });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const link = document.createElement('a');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const url = URL.createObjectURL(blob);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>link.setAttribute('href', url);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>link.setAttribute('download', 'skip-count-assessments.csv');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>link.style.visibility = 'hidden';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.body.appendChild(link);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>link.click();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.body.removeChild(link);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function copyToClipboard() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (attempts.length === 0) { alert('No attempts to copy yet'); return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const { headers, rows } = buildSpreadsheetData();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let text = headers.join('\t') + '\n';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>rows.forEach(row =&gt; { text += row.join('\t') + '\n'; });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>navigator.clipboard.writeText(text).then(() =&gt; { alert('Data copied to clipboard! Paste into Google Sheets or Excel.'); }).catch(() =&gt; { alert('Could not copy to clipboard'); });</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function deleteAttempt(id) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (confirm('Delete this attempt?')) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>attempts = attempts.filter(a =&gt; a.id !== id);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>localStorage.setItem('skipCountAttempts', JSON.stringify(attempts));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderAttempts();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
